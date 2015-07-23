@@ -16,3 +16,8 @@ get '/api/awesome' do
 	}.to_json
 end 
 
+get '/hello/:name' do
+	params[:name]
+	"Yo #{params[:name]}" 
+end 
+
