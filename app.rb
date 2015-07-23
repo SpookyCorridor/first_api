@@ -13,6 +13,6 @@ get '/api/awesome' do
 	 :blue => '#45CAF1',
 	 :indigo => '#7582F6',
 	 :violet => '#E067D6'
-	}
+	}.to_json
 end 
 
