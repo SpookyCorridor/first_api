@@ -1,10 +1,13 @@
 require 'bundler'
 Bundler.require
 
-get '/' do
+def some_json
 	{:name => 'Liz Lemon', :message => 'That\'s a deal breaker'}.to_json
 end
 
+get '/' do 
+	erb :index
+end 
 get '/api/awesome' do
 	{:red => '#D6503F',
 	 :orange => '#D68909',
@@ -16,8 +19,4 @@ get '/api/awesome' do
 	}.to_json
 end 
 
-get '/hello/:name' do
-	params[:name]
-	"Yo #{params[:name]}" 
-end 
 
